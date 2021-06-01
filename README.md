@@ -3,7 +3,7 @@
 
  To run the tests -
  ```
- npm init
+ npm install
  ```
  Then you can run by using cypress open or cypress run. Do this by
  ```
