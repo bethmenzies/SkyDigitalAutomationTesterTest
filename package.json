@@ -1,0 +1,24 @@
+{
+  "name": "skydigitalautomationtestertest",
+  "version": "1.0.0",
+  "description": "Test for Automation Tester Role at Sky Digital",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethmenzies/SkyDigitalAutomationTesterTest.git"
+  },
+  "author": "Beth Menzies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethmenzies/SkyDigitalAutomationTesterTest/issues"
+  },
+  "homepage": "https://github.com/bethmenzies/SkyDigitalAutomationTesterTest#readme"
+}
