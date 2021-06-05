@@ -36,7 +36,7 @@ describe('The shop page is navigable and usable', () => {
         Cypress.Cookies.preserveOnce('consentUUID')
     })
 
-    it('user can navigate to the shop page', () => {
+    it('user can navigate to the deals page and see deals', () => {
         // given I am on the home page
         cy.visit('/')
 
@@ -46,12 +46,27 @@ describe('The shop page is navigable and usable', () => {
         }
         cy.contains('Deals').click()
 
-        // Then I should be on the https://www.sky.com/deals page 
+        // then I should be on the https://www.sky.com/deals page 
+        // given I am on the deals page
         cy.location('pathname').should('eq', '/deals')
 
         cy.contains('Sky Deals').should('exist').should('be.visible')
 
-        
+        // then I see a list of deals with prices
+        cy.get('section.box__Box-eb0ezq-0').within(() => {
+            cy.get('.box__Box-eb0ezq-0.jOIfJV').should('have.length', 6)
+        })
 
+        cy.get('.box__Box-eb0ezq-0.jOIfJV').eq(0).within(() => {
+            cy.get('.text__Text-sc-1u9gciq-0.ebwAcM').should('contain', '£25')
+        })
+
+        cy.get('.box__Box-eb0ezq-0.jOIfJV').eq(1).within(() => {
+            cy.get('.text__Text-sc-1u9gciq-0.ebwAcM').should('contain', '£43')
+        })
+
+        cy.get('.box__Box-eb0ezq-0.jOIfJV').eq(2).within(() => {
+            cy.get('.text__Text-sc-1u9gciq-0.ebwAcM').should('contain', '£36')
+        })
     })
 })
