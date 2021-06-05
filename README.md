@@ -1,6 +1,8 @@
 # SkyDigitalAutomationTesterTest
  Test for Automation Tester Role at Sky Digital
 
+ Clone the project.
+
  To run the tests -
  ```
  npm install
@@ -14,3 +16,5 @@
  npm run cypress:run
  ```
  respectively. 
+
+The sign-in test will only run about 3 times before it takes you to the captcha page, and then it will fail. 
