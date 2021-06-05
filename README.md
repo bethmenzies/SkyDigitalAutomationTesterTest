@@ -1,7 +1,7 @@
 # SkyDigitalAutomationTesterTest
  Test for Automation Tester Role at Sky Digital
 
- Clone the project.
+ Clone the project from the main branch.
 
  To run the tests -
  ```
