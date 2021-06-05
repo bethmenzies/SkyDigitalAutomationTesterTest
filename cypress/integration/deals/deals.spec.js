@@ -19,14 +19,10 @@ Note: Please change the offer prices if the page shows something different. Asse
 */
 
 describe('The deals page is navigable and usable', () => {
-    before (() => {
+    beforeEach (() => {
         cy.fixture('acceptCookieNotice').then((json) => {
             cy.intercept('GET', 'wrapper/tcfv2/v1/gdpr/native-message*', json)
         })
-    })
-
-    beforeEach(() => {
-        Cypress.Cookies.preserveOnce('consentUUID')
     })
 
     it('user can navigate to the deals page and see deals', () => {
